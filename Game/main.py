@@ -1,23 +1,37 @@
+from random import random
 from turtle import get_poly
 from player import Player
 
 tim = Player('Tim')
 
-from enemy import Enemy, Troll
+from enemy import Enemy, Troll, Vampyre
 
-# random_moster = Enemy("Basic enemy", 12, 1)
-# print(random_moster)
 
-# random_moster.take_damage(4)
-# print(random_moster)
+vamp = Vampyre("Vlad")
+print(vamp)
+vamp.take_damage(5)
+print(vamp)
 
-# random_moster.take_damage(8)
-# print(random_moster)
+print("-"*40)
 
-# random_moster.take_damage(9)
-# print(random_moster)
+# while vamp.alive: 
+#     vamp.take_damage(1)
 
+
+vamp._lives = 0
+vamp._hit_points = 1
+print(vamp)
+
+
+"""
+# TROLL CLASSS
 ugly_troll = Troll("Pug")
+print('Ugly troll - {}'.format(ugly_troll))
+ugly_troll.take_damage(10)
+print('Ugly troll - {}'.format(ugly_troll))
+ugly_troll.take_damage(13)
+print('Ugly troll - {}'.format(ugly_troll))
+ugly_troll.take_damage(1)
 print('Ugly troll - {}'.format(ugly_troll))
 
 another_troll = Troll("Ug")
@@ -29,6 +43,23 @@ print(brother)
 ugly_troll.grunt()
 another_troll.grunt()
 brother.grunt()
+
+"""
+
+
+# random_moster = Enemy("Basic enemy", 12, 1)
+# print(random_moster)
+
+# random_moster.take_damage(4)
+# print(random_moster)
+
+# random_moster.take_damage(8)
+# print(random_moster)
+
+# random_moster.take_damage(0)
+# print(random_moster)
+
+
 
 # monster = Enemy('Basic enemy')
 # monster.grunt()
