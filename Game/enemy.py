@@ -1,4 +1,4 @@
-import random 
+import random
 
 # class Enemy(object):
 class Enemy: 
@@ -17,13 +17,13 @@ class Enemy:
         else: 
             self._lives -= 1
             if self._lives > 0: 
-                print("{0.name} lost a life".format(self))
+                print("{0._name} lost a life".format(self))
             else: 
-                print("{0.name} is dead".format(self))
+                print("{0._name} is dead".format(self))
                 self._alive = False
     
     def __str__(self): 
-        return "Name: {0.name}, Lives: {0.lives}, Hit points: {0.hit_points}".format(self)
+        return "Name: {0._name}, Lives: {0._lives}, Hit points: {0._hit_points}".format(self)
 
 
 class Troll(Enemy): 
@@ -33,7 +33,7 @@ class Troll(Enemy):
         super().__init__(name = name, lives = 1, hit_points=23)
     
     def grunt(self): 
-        print("Me {0.name}. {0.name} stomp you".format(self))
+        print("Me {0._name}. {0._name} stomp you".format(self))
 
 class Vampyre(Enemy): 
 
@@ -42,7 +42,7 @@ class Vampyre(Enemy):
     
     def dodges(self): 
         if random.randint(1, 3) == 3: 
-            print("**** {0.name} dodges ****".format(self))
+            print("**** {0._name} dodges ****".format(self))
             return True
         else: 
             return False
@@ -52,14 +52,12 @@ class Vampyre(Enemy):
             return super().take_damage(damage=damage)
 
 
-# challenge
-# create a new Vampire class that's a subclass of Enemy. 
-# Vampyres have 3 lives, and take 12 hitpoints of damage
-# You can create  a new Python file for the Vampyre if you like, but I'd 
-# suggest adding it to the existing enemy.py file.
+class VampyreKing(Vampyre): 
 
-# Test your class by creating one or two Vampyre instances and displaying their 
-# details. Also inflict some damage to make sure that take_damage method woks ok
-# Also make sure that the trolls can also take damage, becase we havent tested that yet.
+    def __init__(self, name):
+        super().__init__(name)
+        self._hit_points = 140
 
-
+    def take_damage(self, damage):
+        return super().take_damage(damage // 4)
+        

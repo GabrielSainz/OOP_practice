@@ -1,12 +1,50 @@
+a = 3
+b = "tim"
+c = 1,2,3
+
+print(a)
+print(b)
+print(c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 from random import random
 from turtle import get_poly
 from player import Player
 
 tim = Player('Tim')
 
-from enemy import Enemy, Troll, Vampyre
+from enemy import Enemy, Troll, Vampyre, VampyreKing
 
 
+
+
+dracula = VampyreKing("Dracula")
+print(dracula)
+dracula.take_damage(12)
+print(dracula)
+
+
+"""
+
+
+
+"""
 vamp = Vampyre("Vlad")
 print(vamp)
 vamp.take_damage(5)
@@ -21,7 +59,7 @@ print("-"*40)
 vamp._lives = 0
 vamp._hit_points = 1
 print(vamp)
-
+"""
 
 """
 # TROLL CLASSS
