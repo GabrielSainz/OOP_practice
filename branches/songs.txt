@@ -3,9 +3,5 @@ hello
 hello
 hello
 
-#####################################################
-we are in the empty playlist branch
-#####################################################
-
 
 blah blah blah
